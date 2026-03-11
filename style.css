@@ -136,6 +136,29 @@ nav a:hover {
     box-shadow: 1px 1px 0px var(--accent-color);
 }
 
+@media (max-width: 768px) {
+    .glass-header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        height: auto;
+        padding: 1rem 5%;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+    nav a {
+        font-size: 0.8rem;
+    }
+    .hero-section {
+        padding-top: 140px; /* offset taller header */
+    }
+}
+
 /* === Buttons Base === */
 .brutal-btn-lg {
     display: inline-block;
@@ -710,5 +733,161 @@ section {
     }
     .timeline-dot {
         left: 11px;
+    }
+}
+
+/* === Contact Section === */
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 5%;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 4rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info .section-title {
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.contact-info p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 90%;
+}
+
+.email-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.copy-icon {
+    color: var(--accent-color);
+    transition: transform 0.2s ease;
+}
+
+.email-wrapper:hover .copy-icon {
+    transform: scale(1.1);
+}
+
+.copy-feedback {
+    display: block;
+    margin-top: 1rem;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.copy-feedback.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphic Form with Floating Labels */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--text-muted);
+    padding: 1rem 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    color: var(--text-muted);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Floating Label Logic */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.contact-form .brutal-btn-lg {
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+@media (max-width: 968px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info .section-title {
+        font-size: 2.5rem;
+    }
+    .email-wrapper {
+        padding: 1rem;
+        font-size: 1rem;
     }
 }

@@ -251,7 +251,42 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
-            <!-- Details to be implemented -->
+            <div class="contact-container glass-panel">
+                <div class="contact-info">
+                    <h2 class="section-title">Let's Build<br>Something.</h2>
+                    <p>Currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    
+                    <div class="email-wrapper brutal-box" id="copy-email-btn">
+                        <span id="email-text">hello@developer.com</span>
+                        <div class="copy-icon">
+                            <!-- Simple SVG copy icon -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span class="copy-feedback" id="copy-feedback">Copied to clipboard!</span>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#" method="POST" id="contact-form">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="brutal-btn-lg magnetic-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
     </main>
