@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Frontend Developer</title>
+    <!-- Google Fonts for Neo-Brutalist and clean minimal typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="glass-header">
+        <div class="logo">PORTFOLIO</div>
+        <nav>
+            <a href="#hero" class="magnetic-btn">Home</a>
+            <a href="#tech-stack" class="magnetic-btn">Skills</a>
+            <a href="#projects" class="magnetic-btn">Projects</a>
+            <a href="#experience" class="magnetic-btn">Experience</a>
+            <a href="#contact" class="magnetic-btn brutal-btn">Let's Talk</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    <span class="accent-text">BUILDING</span><br>
+                    DIGITAL<br>
+                    REALITIES
+                </h1>
+                <p class="hero-subtitle">Senior Frontend Developer specializing in high-performance, interactive web experiences.</p>
+                <div class="hero-cta-wrapper">
+                    <a href="#projects" class="brutal-btn-lg magnetic-btn">View My Work</a>
+                    <a href="#contact" class="glass-btn magnetic-btn">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <div class="scene-3d">
+                    <div class="cube-container magnetic-3d">
+                        <div class="cube">
+                            <div class="cube-face front glass-panel"><span>HTML</span></div>
+                            <div class="cube-face back glass-panel"><span>CSS</span></div>
+                            <div class="cube-face right glass-panel"><span>JS</span></div>
+                            <div class="cube-face left glass-panel"><span>REACT</span></div>
+                            <div class="cube-face top glass-panel"><span>3D</span></div>
+                            <div class="cube-face bottom glass-panel"><span>WEBGL</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section (Bento Box) -->
+        <section id="tech-stack" class="tech-section">
+            <h2 class="section-title">Tech Arsenal</h2>
+            
+            <div class="bento-grid">
+                <!-- Large Item -->
+                <div class="bento-item glass-panel item-large">
+                    <div class="tech-info">
+                        <h3>JavaScript (ES6+)</h3>
+                        <span class="tech-level">95%</span>
+                    </div>
+                    <div class="progress-wrap brutal-box">
+                        <div class="progress-fill" data-width="95%"></div>
+                    </div>
+                    <p class="tech-desc">Core expertise in vanilla JS, WebGL integrations, and deep DOM manipulation.</p>
+                </div>
+
+                <!-- Standard Items -->
+                <div class="bento-item glass-panel">
+                    <div class="tech-info">
+                        <h3>React & Redux</h3>
+                        <span class="tech-level">90%</span>
+                    </div>
+                    <div class="progress-wrap brutal-box">
+                        <div class="progress-fill" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <div class="bento-item glass-panel">
+                    <div class="tech-info">
+                        <h3>TypeScript</h3>
+                        <span class="tech-level">85%</span>
+                    </div>
+                    <div class="progress-wrap brutal-box">
+                        <div class="progress-fill" data-width="85%"></div>
+                    </div>
+                </div>
+
+                <div class="bento-item glass-panel">
+                    <div class="tech-info">
+                        <h3>HTML5 & CSS3</h3>
+                        <span class="tech-level">98%</span>
+                    </div>
+                    <div class="progress-wrap brutal-box">
+                        <div class="progress-fill" data-width="98%"></div>
+                    </div>
+                </div>
+
+                <div class="bento-item glass-panel">
+                    <div class="tech-info">
+                        <h3>Three.js / GSAP</h3>
+                        <span class="tech-level">80%</span>
+                    </div>
+                    <div class="progress-wrap brutal-box">
+                        <div class="progress-fill" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Horizontal Scroll) -->
+        <section id="projects" class="projects-section">
+            <div class="sticky-wrapper">
+                <h2 class="section-title floating-title">Selected Works</h2>
+                <div class="horizontal-scroll-container">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="project-card brutal-box">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder bg-cyan"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>DeFi Dashboard</h3>
+                            <p class="project-snippet">A minimalist Web3 interface for tracking asset correlations.</p>
+                            
+                            <div class="project-details">
+                                <div class="tech-tags">
+                                    <span>React</span>
+                                    <span>Ethers.js</span>
+                                    <span>Tailwind</span>
+                                </div>
+                                <a href="#" class="brutal-btn magnetic-btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card brutal-box">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder bg-dark"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Commerce Core</h3>
+                            <p class="project-snippet">Headless storefront with 100/100 Lighthouse performance score.</p>
+                            
+                            <div class="project-details">
+                                <div class="tech-tags">
+                                    <span>Next.js</span>
+                                    <span>GraphQL</span>
+                                    <span>Framer Motion</span>
+                                </div>
+                                <a href="#" class="brutal-btn magnetic-btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card brutal-box">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder bg-cyan"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Code Visualizer</h3>
+                            <p class="project-snippet">Interactive nodes representing AST structures in real-time.</p>
+                            
+                            <div class="project-details">
+                                <div class="tech-tags">
+                                    <span>Three.js</span>
+                                    <span>TypeScript</span>
+                                    <span>Zustand</span>
+                                </div>
+                                <a href="#" class="brutal-btn magnetic-btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card brutal-box">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder bg-dark"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Design System</h3>
+                            <p class="project-snippet">A comprehensive UI kit built for a fintech enterprise.</p>
+                            
+                            <div class="project-details">
+                                <div class="tech-tags">
+                                    <span>Storybook</span>
+                                    <span>SCSS</span>
+                                    <span>React</span>
+                                </div>
+                                <a href="#" class="brutal-btn magnetic-btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="experience-section">
+            <h2 class="section-title">Timeline</h2>
+            
+            <div class="timeline-container">
+                <!-- Center dashed line and illuminated fill -->
+                <div class="timeline-line">
+                    <div class="timeline-line-fill"></div>
+                </div>
+
+                <!-- Timeline Items -->
+                <div class="timeline-item">
+                    <div class="timeline-dot brutal-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="timeline-date">2022 - Present</span>
+                        <h3>Senior Frontend Engineer</h3>
+                        <h4>FinTech Innovators</h4>
+                        <p>Architected a complete overhaul of the legacy monolithic frontend into a high-performance micro-frontend architecture using Next.js and Module Federation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot brutal-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="timeline-date">2019 - 2022</span>
+                        <h3>Frontend Developer</h3>
+                        <h4>Creative Web Agency</h4>
+                        <p>Delivered 30+ bespoke interactive websites using React, Three.js, and GSAP. Focused on award-winning animations and optimal Core Web Vitals.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot brutal-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <span class="timeline-date">2017 - 2019</span>
+                        <h3>UI/UX Developer</h3>
+                        <h4>Startup Inc</h4>
+                        <p>Bridged the gap between design and engineering. Built reusable UI component libraries and established internal design systems across products.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <!-- Details to be implemented -->
+        </section>
+
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
