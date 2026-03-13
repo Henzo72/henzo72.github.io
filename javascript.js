@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Burger Menu Logic ---
+    const burger = document.getElementById('burger-menu');
+    const nav = document.getElementById('nav-links');
+    const navLinks = document.querySelectorAll('#nav-links a');
+
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+            });
+        });
+    }
     
     // --- Magnetic Button Effect ---
     const magneticElements = document.querySelectorAll('.magnetic-btn');

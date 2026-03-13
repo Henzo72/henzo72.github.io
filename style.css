@@ -94,6 +94,30 @@ a {
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
+    position: relative;
+    z-index: 100;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+}
+
+.burger-menu span {
+    width: 30px;
+    height: 3px;
+    background: var(--text-color);
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    transform-origin: 1px;
 }
 
 nav {
@@ -138,24 +162,45 @@ nav a:hover {
 
 @media (max-width: 768px) {
     .glass-header {
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
-        height: auto;
-        padding: 1rem 5%;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0 5%;
+    }
+    .burger-menu {
+        display: flex;
     }
     nav {
-        display: flex;
-        flex-wrap: wrap;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(18, 18, 18, 0.98);
+        flex-direction: column;
         justify-content: center;
-        gap: 1rem;
-        width: 100%;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 99;
+        gap: 2rem;
+    }
+    nav.nav-active {
+        right: 0;
     }
     nav a {
-        font-size: 0.8rem;
+        font-size: 1.5rem;
+    }
+    .burger-menu.toggle span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .burger-menu.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu.toggle span:nth-child(3) {
+        transform: rotate(-45deg);
     }
     .hero-section {
-        padding-top: 140px; /* offset taller header */
+        padding-top: 100px;
     }
 }
 
