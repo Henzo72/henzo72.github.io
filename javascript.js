@@ -18,6 +18,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    // --- Profile Image Interaction Logic ---
+    const profileImg = document.getElementById('profile-pic');
+    const profileContainer = document.querySelector('.profile-image-container');
+    
+    if (profileContainer && profileImg) {
+        profileContainer.addEventListener('click', () => {
+            // Randomize color locally on click for a fun Easter egg
+            const colors = ['#00F2FF', '#FF0055', '#00FF66', '#FFD700', '#B026FF'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            profileContainer.style.setProperty('box-shadow', `8px 8px 0px ${randomColor}`, 'important');
+            profileContainer.style.setProperty('border-color', randomColor, 'important');
+            
+            // Add a little pop effect to the inner image
+            profileImg.style.transform = 'scale(0.9) rotate(-5deg)';
+            
+            // Revert after 1 second
+            setTimeout(() => {
+                profileContainer.style.removeProperty('box-shadow');
+                profileContainer.style.removeProperty('border-color');
+                profileImg.style.transform = 'scale(1) rotate(0deg)';
+            }, 800);
+        });
+    }
     
     // --- Magnetic Button Effect ---
     const magneticElements = document.querySelectorAll('.magnetic-btn');

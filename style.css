@@ -279,6 +279,43 @@ section {
     justify-content: center;
 }
 
+/* === Profile Image Component === */
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: var(--brutal-border);
+    box-shadow: var(--brutal-shadow);
+    background-color: var(--bg-color);
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 10;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--bg-color); /* Inner spacing effect */
+    filter: grayscale(100%) brightness(0.9) contrast(1.2);
+    transition: filter 0.5s ease, transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.profile-image-container:hover {
+    box-shadow: 8px 8px 0px var(--text-color);
+    border-color: var(--text-color);
+}
+
+.profile-image-container:hover .profile-img {
+    filter: grayscale(0%) brightness(1) contrast(1);
+}
+
 /* === Hero Section === */
 .hero-section {
     display: grid;
